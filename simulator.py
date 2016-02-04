@@ -47,6 +47,7 @@ str_waves = make_pvs("string128", "string2k", "string64k")
 
 subarrays =  make_pvs("subArr1", "subArr2", "subArr3", "subArr4" )
 subarray_driver = make_pvs("wave_test",)[0]
+emptyish_string_wave = make_pvs("waveform_char256",)[0]
 
 
 def initialize_data():
@@ -54,6 +55,9 @@ def initialize_data():
 
     for p in mbbos:
         p.put(1)
+
+    # the 'empty-ish' string has a NORD of 1, with its value being "\0"
+    emptyish_string_wave.put([0])
 
     for i, p in enumerate(longs):    p.put((i+1))
 

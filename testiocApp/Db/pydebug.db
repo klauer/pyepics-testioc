@@ -59,6 +59,12 @@ record(waveform,"$(P)char64k")  {
        field(FTVL,"UCHAR")
 }
 
+record(waveform, "$(P)waveform_char256")
+{
+    field(FTVL, "CHAR")
+    field(NELM, "256")
+}
+
 record(waveform,"$(P)double128")  {
        field(DTYP,"Soft Channel")
        field(DESC,"short double waveform")
